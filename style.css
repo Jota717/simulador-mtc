@@ -1,0 +1,1556 @@
+/* =========================================================
+   VARIABLES GENERALES DEL DISEÑO
+   ========================================================= */
+
+:root {
+
+    /* -------------------------
+       COLORES PRINCIPALES
+       ------------------------- */
+
+    --verde-principal: #006b3c;
+    --verde-secundario: #008f55;
+    --verde-claro: #dff3e7;
+    --verde-hover: #edf8f2;
+    --verde-correcto: #4CAF50;
+    --rojo-incorrecto: #F44336;
+    --azul-datos: #4A90E2;
+
+    /* -------------------------
+       COLORES GENERALES
+       ------------------------- */
+
+    --fondo: #f8faf9;
+    --blanco: #ffffff;
+    --texto-principal: #111827;
+    --texto-secundario: #4b5563;
+    --borde: #d1d5db;
+    --borde-input: #b7c1c9;
+    --fondo-deshabilitado: #f3f4f6;
+    --color-barra-fondo: #e5e7eb;
+
+    /* -------------------------
+       SOMBRAS
+       ------------------------- */
+    --sombra: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --sombra-suave: 0 2px 3px rgba(0, 0, 0, 0.15);
+
+    /* -------------------------
+       BORDES REDONDEADOS
+       ------------------------- */
+    --radio-principal: 12px;
+    --radio-input: 10px;
+
+    /* -------------------------
+       ANCHOS
+       ------------------------- */
+    --ancho-opciones: 360px;
+}
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto-principal);
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   PANTALLA DE INICIO
+   ========================================================= */
+
+#pantallaInicio {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--fondo);
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+#pantallaInicio h1 {
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 35px 20px 40px;
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--verde-secundario)
+    );
+    color: var(--blanco);
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: var(--sombra);
+}
+
+/* =========================================================
+   SELECTOR DE MODO
+   ========================================================= */
+
+#opcionesModo {
+    display: flex;
+    width: 100%;
+    max-width: var(--ancho-opciones);
+    margin-bottom: 20px;
+    background: var(--blanco);
+    border-radius: var(--radio-principal);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+#opcionesModo label {
+    flex: 1;
+    margin: 0;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    background: var(--blanco);
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+#opcionesModo label:hover {
+    background: var(--verde-hover);
+}
+
+#opcionesModo input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+#opcionesModo label:has(input:checked) {
+    background: var(--verde-claro);
+    color: var(--verde-principal);
+    font-weight: bold;
+}
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+#pantallaInicio hr {
+    width: 100%;
+    max-width: var(--ancho-opciones);
+    margin: 0 0 15px;
+    border: 0;
+    border-top: 1px solid var(--borde);
+}
+
+/* =========================================================
+   OPCIONES DE ESTUDIO
+   ========================================================= */
+
+#opcionesEstudio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#opcionesEstudio h2 {
+    margin: 15px 0;
+    color: var(--texto-principal);
+    font-size: 22px;
+}
+
+/* =========================================================
+   OPCIONES DE CANTIDAD
+   ========================================================= */
+
+#opcionesEstudio label {
+    display: block;
+    width: 100%;
+    max-width: var(--ancho-opciones);
+    margin: 6px 0;
+    padding: 13px 18px;
+    background: var(--blanco);
+    border-radius: var(--radio-principal);
+    box-shadow: var(--sombra);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+#opcionesEstudio label:hover {
+    background: var(--verde-hover);
+}
+
+#opcionesEstudio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+#opcionesEstudio label:has(input:checked) {
+    background: var(--verde-claro);
+    color: var(--verde-principal);
+    font-weight: bold;
+}
+
+/* =========================================================
+   INPUT PERSONALIZADO
+   ========================================================= */
+
+#cantidadPersonalizada {
+    display: block;
+    width: 100%;
+    max-width: var(--ancho-opciones);
+    margin: 8px 0 20px;
+    padding: 12px;
+    border: 1px solid var(--borde-input);
+    border-radius: var(--radio-input);
+    background: var(--blanco);
+    color: var(--texto-principal);
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#cantidadPersonalizada:focus {
+    border-color: var(--verde-secundario);
+    box-shadow:
+        0 0 0 2px var(--verde-claro);
+}
+
+#cantidadPersonalizada:disabled {
+    background: var(--fondo-deshabilitado);
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   BOTONES DE ACCIÓN
+   ========================================================= */
+
+.botonAccion {
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--blanco);
+    color: var(--texto-principal);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.botonAccion:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra);
+}
+
+.botonPrincipal {
+    background: var(--verde-principal);
+    color: var(--blanco);
+    border-color: var(--verde-principal);
+}
+
+.botonPrincipal:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.botonSecundario:hover:not(:disabled) {
+    background: var(--verde-hover);
+    border-color: var(--verde-secundario);
+}
+
+.botonAccion:disabled {
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   BOTÓN COMENZAR
+   ========================================================= */
+
+#btnComenzar {
+    width: 100%;
+    max-width: var(--ancho-opciones);
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: var(--radio-principal);
+    background: linear-gradient(
+        135deg,
+        var(--verde-secundario),
+        var(--verde-principal)
+    );
+    color: var(--blanco);
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+#btnComenzar:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+#btnComenzar:focus-visible {
+    outline: 3px solid var(--verde-claro);
+    outline-offset: 2px;
+}
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #pantallaInicio {
+        padding: 0 20px 25px;
+    }
+
+    #pantallaInicio h1 {
+        padding: 35px 10px 45px;
+        font-size: 27px;
+    }
+
+    #opcionesModo,
+    #opcionesEstudio label,
+    #cantidadPersonalizada,
+    #btnComenzar,
+    #pantallaInicio hr {
+        max-width: 100%;
+    }
+
+    #opcionesEstudio h2 {
+        font-size: 20px;
+    }
+}
+
+#opcionesEstudio[hidden] {
+    display: none;
+}
+
+/* =========================================================
+   CONTROL DE PANTALLAS
+   ========================================================= */
+
+#pantallaInicio[hidden],
+#pantallaExamen[hidden],
+#pantallaResultado[hidden],
+#pantallaRevision[hidden] {
+    display: none !important;
+}
+
+/* =========================================================
+   ESTADOS DE LAS RESPUESTAS
+========================================================= */
+
+/* ---------------------------------------------------------
+   RESPUESTA CORRECTA
+   --------------------------------------------------------- */
+
+#opciones button.correcta {
+    background-color: var(--verde-correcto);
+    color: var(--blanco);
+    border-color: var(--verde-correcto);
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   RESPUESTA INCORRECTA
+   --------------------------------------------------------- */
+
+#opciones button.incorrecta {
+    background-color: var(--rojo-incorrecto);
+    color: var(--blanco);
+    border-color: var(--rojo-incorrecto);
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   RESPUESTA SELECCIONADA EN MODO EXAMEN
+   --------------------------------------------------------- */
+
+#opciones button.seleccionada {
+    background-color: var(--verde-claro);
+    color: var(--verde-principal);
+    border-color: var(--verde-principal);
+    font-weight: bold;
+}
+
+/* =========================================================
+   PANTALLA DE EXAMEN
+========================================================= */
+
+#pantallaExamen {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0 20px 40px;
+
+    background: var(--fondo);
+}
+
+/* =========================================================
+   CONTENIDO DEL EXAMEN
+========================================================= */
+
+#progresoExamen,
+#contador,
+#pregunta,
+#contenedorImagen,
+#opciones,
+#btnSiguiente {
+    width: 100%;
+    max-width: 1000px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   PROGRESO
+========================================================= */
+
+#progresoExamen {
+    max-width: 620px;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+#porcentajeProgreso {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--verde-principal);
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#barraProgreso {
+    width: 100%;
+    height: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+#barraProgresoActual {
+    width: 0%;
+    height: 100%;
+
+    background: var(--verde-secundario);
+
+    border-radius: 999px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+#contador {
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   PREGUNTA
+========================================================= */
+
+#pregunta {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--texto-principal);
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+#contenedorImagen {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+#contenedorImagen[hidden] {
+    display: none;
+}
+
+#imagenPregunta {
+    display: block;
+
+    max-width: 100%;
+    max-height: 4cm;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   CONTENEDOR DE ALTERNATIVAS
+========================================================= */
+
+#opciones {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   BOTONES DE ALTERNATIVAS
+========================================================= */
+
+#opciones button {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 14px 18px;
+
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-principal);
+
+    background: var(--blanco);
+    color: var(--texto-principal);
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+/* =========================================================
+   HOVER DE ALTERNATIVAS
+========================================================= */
+
+#opciones button:hover:not(:disabled) {
+    background: var(--verde-hover);
+
+    border-color: var(--verde-secundario);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ALTERNATIVA DESHABILITADA
+========================================================= */
+
+#opciones button:disabled {
+    cursor: default;
+}
+
+
+/* =========================================================
+   BOTÓN SIGUIENTE
+========================================================= */
+
+#btnSiguiente {
+    display: block;
+
+    width: 160px;
+
+    margin-top: 18px;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: var(--radio-principal);
+
+    background: linear-gradient(
+        135deg,
+        var(--verde-secundario),
+        var(--verde-principal)
+    );
+
+    color: var(--blanco);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   HOVER BOTÓN SIGUIENTE
+========================================================= */
+
+#btnSiguiente:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   SIGUIENTE DESHABILITADO
+========================================================= */
+
+#btnSiguiente:disabled {
+    background: var(--fondo-deshabilitado);
+
+    color: var(--texto-secundario);
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+/* =========================================================
+   RESULTADOS
+========================================================= */
+
+/* ---------------------------------------------------------
+   CONTENEDOR DE RESULTADOS
+--------------------------------------------------------- */
+
+#contenidoResultado {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =========================================================
+   TARJETA PRINCIPAL
+========================================================= */
+
+.tarjetaResultado {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 35px;
+
+    background: var(--blanco);
+
+    border-radius: var(--radio-principal);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* =========================================================
+   BLOQUE PORCENTAJE
+========================================================= */
+
+.bloquePorcentaje {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* ---------------------------------------------------------
+   PORCENTAJE
+--------------------------------------------------------- */
+
+.porcentajeResultado {
+    margin: 0;
+
+    color: var(--verde-principal);
+
+    font-size: 42px;
+    font-weight: bold;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   GRÁFICO CIRCULAR
+========================================================= */
+
+.graficoResultado {
+    --tamano-grafico: 200px;
+    --diametro-interior: 170px;
+    --grosor-grafico: calc((var(--tamano-grafico) - var(--diametro-interior)) / 2);
+    --radio-grafico: calc((var(--tamano-grafico) + var(--diametro-interior)) / 4);
+
+    width: var(--tamano-grafico);
+    height: var(--tamano-grafico);
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            var(--verde-secundario)
+            var(--porcentaje),
+            var(--color-barra-fondo)
+            var(--porcentaje)
+        );
+
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+   PUNTAS REDONDEADAS DEL AVANCE
+--------------------------------------------------------- */
+
+.puntaGrafico {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: var(--grosor-grafico);
+    height: var(--grosor-grafico);
+
+    border-radius: 50%;
+
+    background: var(--verde-secundario);
+
+    z-index: 1;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--angulo-punta))
+        translateY(calc(-1 * var(--radio-grafico)));
+}
+
+.graficoResultado.sinProgreso .puntaGrafico {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------
+   CENTRO DEL GRÁFICO
+--------------------------------------------------------- */
+
+.graficoResultado::after {
+    content: "";
+
+    position: absolute;
+
+    width: var(--diametro-interior);
+    height: var(--diametro-interior);
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: var(--blanco);
+
+    border-radius: 50%;
+
+    z-index: 0;
+}
+/* =========================================================
+   TÍTULO DEL RESULTADO
+========================================================= */
+
+.tituloResultado {
+    width: 100%;
+
+    margin: 0 0 15px 0;
+
+    color: var(--texto-principal);
+
+    font-size: 30px;
+    font-weight: bold;
+
+    text-align: left;
+}
+
+/* =========================================================
+   BLOQUE DE DATOS
+========================================================= */
+
+.bloqueDatos {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+
+
+    gap: 15px;
+}
+
+.contenidoDatos {
+    width: 100%;
+    min-width: 0;
+}
+
+/* =========================================================
+   CONTENEDOR DE LAS TARJETAS
+========================================================= */
+
+.tarjetasDatos {
+    width: 100%;
+    height: 125px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+/* =========================================================
+   TARJETA DE DATO
+========================================================= */
+
+.datoResultado {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: 10px 8px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 8px;
+
+    box-shadow: var(--sombra-suave);
+
+    text-align: center;
+}
+
+
+.datoResultado:hover {
+    transform: translateY(-2px);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* =========================================================
+   VALOR
+========================================================= */
+
+.valorDato {
+    margin-bottom: 5px;
+
+    color: var(--texto-principal);
+
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NOMBRE
+========================================================= */
+
+.nombreDato {
+    color: var(--texto-secundario);
+
+    font-size: 15px;
+}
+
+/* =========================================================
+   MENSAJE DE RESULTADO
+========================================================= */
+
+.mensajeResultado {
+    width: 100%;
+
+    margin: 20px 0;
+
+    padding: 9px 12px;
+
+    background: var(--verde-claro);
+
+    border: 1px solid var(--verde-secundario);
+
+    border-radius: 8px;
+
+    color: var(--texto-principal);
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+/* =========================================================
+   ESTADOS DEL MENSAJE
+========================================================= */
+
+.mensajeEstudio {
+    background: var(--verde-claro);
+    border-color: var(--verde-secundario);
+}
+
+
+.mensajeAprobado {
+    background: var(--verde-claro);
+    border-color: var(--verde-correcto);
+    color: var(--verde-principal);
+}
+
+.mensajeDesaprobado {
+    background: #fde8e7;
+    border-color: var(--rojo-incorrecto);
+    color: var(--rojo-incorrecto);
+}
+
+/* =========================================================
+   COLORES DE LAS TARJETAS
+========================================================= */
+
+.datoCorrectas .valorDato {
+    color: var(--verde-correcto);
+}
+
+
+.datoIncorrectas .valorDato {
+    color: var(--rojo-incorrecto);
+}
+
+
+.datoPreguntas .valorDato {
+    color: var(--azul-datos);
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #contenidoResultado {
+        max-width: 100%;
+    }
+
+    /*
+       En celular el contenido se ordena verticalmente:
+       título → gráfico → datos → mensaje → botones.
+    */
+    .tarjetaResultado {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 30px 20px;
+    }
+
+    .bloqueDatos,
+    .contenidoDatos {
+        display: contents;
+    }
+
+    .tituloResultado {
+        order: 1;
+        margin: 0 0 20px;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .bloquePorcentaje {
+        order: 2;
+        width: 100%;
+
+        padding-right: 0;
+        padding-bottom: 30px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--borde);
+    }
+
+    .porcentajeResultado {
+        font-size: 36px;
+    }
+
+    .graficoResultado {
+        --tamano-grafico: 135px;
+        --diametro-interior: 105px;
+        margin: 0 auto;
+    }
+
+    .tarjetasDatos {
+        order: 3;
+        width: 100%;
+        height: 125px;
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .datoResultado {
+        min-height: 125px;
+    }
+
+    .valorDato {
+        font-size: 27px;
+    }
+
+    .nombreDato {
+        font-size: 14px;
+    }
+
+    .mensajeResultado {
+        order: 4;
+    }
+
+    .mensajeSinErrores {
+        order: 5;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .botonesResultado {
+        order: 6;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .botonesResultado button {
+        width: 100%;
+        min-height: 52px;
+        padding: 12px 18px;
+    }
+}
+
+/* =========================================================
+   IMÁGENES MÚLTIPLES DE UNA PREGUNTA
+========================================================= */
+
+.imagenPreguntaExtra {
+    max-width: 45%;
+    max-height: 4cm;
+    object-fit: contain;
+    margin: 0 10px;
+}
+
+
+/* =========================================================
+   AJUSTE PARA VARIAS IMÁGENES
+========================================================= */
+
+#contenedorImagen:has(.imagenPreguntaExtra) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #contenedorImagen:has(.imagenPreguntaExtra) {
+        flex-wrap: wrap;
+    }
+
+    .imagenPreguntaExtra {
+        max-width: 90%;
+    }
+}
+
+/* =========================================================
+   IMÁGENES DE LAS ALTERNATIVAS
+========================================================= */
+
+#opciones button img {
+    display: block;
+    max-height: 4cm;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* =========================================================
+   ALTERNATIVAS CON IMAGEN
+========================================================= */
+
+#opciones button:has(img) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+
+#opciones button:has(img) strong {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTONES DE RESULTADOS
+========================================================= */
+
+.botonesResultado {
+    width: 100%;
+
+    flex-basis: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+/* =========================================================
+   BOTONES DE RESULTADOS
+========================================================= */
+
+.botonesResultado button {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 18px;
+}
+
+/* =========================================================
+   MENSAJE SIN ERRORES
+========================================================= */
+
+.mensajeSinErrores {
+    width: 100%;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* =========================================================
+   PANTALLA DE REVISIÓN
+========================================================= */
+
+#pantallaRevision {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0 20px 40px;
+
+    background: var(--fondo);
+}
+
+/* =========================================================
+   CONTENIDO DE LA REVISIÓN
+========================================================= */
+
+#contenidoRevision {
+    width: 100%;
+    max-width: 1000px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   ALTERNATIVAS — REVISIÓN DE ERRORES
+========================================================= */
+
+.alternativaRevision.respuestaElegida {
+    border: 2px solid var(--rojo-incorrecto);
+}
+
+.alternativaRevision.respuestaCorrecta {
+    border: 2px solid var(--verde-correcto);
+}
+
+/* =========================================================
+   TARJETAS DE REVISIÓN
+========================================================= */
+
+.errorRevision {
+    width: 100%;
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-principal);
+
+    box-shadow: var(--sombra-suave);
+}
+
+/* =========================================================
+   IMÁGENES — REVISIÓN DE ERRORES
+========================================================= */
+
+.imagenRevision {
+    display: block;
+
+    max-height: 4cm;
+    width: auto;
+    max-width: 100%;
+
+    margin: 15px auto;
+}
+
+.alternativaRevision img {
+    display: block;
+
+    max-height: 3cm;
+    width: auto;
+    max-width: 100%;
+
+    margin-top: 10px;
+}
+
+/* =========================================================
+   ALTERNATIVAS — REVISIÓN DE ERRORES
+========================================================= */
+
+.alternativaRevision {
+    width: 100%;
+    padding: 12px 15px;
+
+    margin-top: 10px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-input);
+
+    box-shadow: var(--sombra-suave);
+}
+
+/* =========================================================
+   BOTÓN VOLVER AL RESULTADO
+========================================================= */
+
+/* =========================================================
+   ENCABEZADO DE LAS PANTALLAS
+========================================================= */
+
+.encabezadoPantalla {
+    width: 100%;
+
+    margin: 0 0 30px;
+    padding: 35px 20px 30px;
+
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--verde-secundario)
+    );
+
+    color: var(--blanco);
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+}
+
+
+.encabezadoPantalla h1 {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.encabezadoPantalla h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* =========================================================
+   BOTONES DE LA REVISIÓN
+========================================================= */
+
+#botonesRevision {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto 0;
+
+    gap: 10px;
+}
+
+#botonesRevision button {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 18px;
+}
+
+/* =========================================================
+   IMÁGENES MÚLTIPLES — REVISIÓN
+========================================================= */
+
+.imagenesRevisionMultiples {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin: 15px 0;
+}
+
+.imagenesRevisionMultiples .imagenPreguntaExtra {
+    max-width: 45%;
+    max-height: 4cm;
+    margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+
+    .imagenesRevisionMultiples {
+        flex-wrap: wrap;
+    }
+
+    .imagenesRevisionMultiples .imagenPreguntaExtra {
+        max-width: 90%;
+    }
+}
+
+/* =========================================================
+   MODAL DE CONFIRMACIÓN DE SALIDA
+========================================================= */
+
+.modalSalida {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 1000;
+}
+
+.modalSalida[hidden] {
+    display: none;
+}
+
+.modalSalidaContenido {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 30px;
+
+    background: var(--blanco);
+
+    border-radius: var(--radio-principal);
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+}
+
+.modalSalidaContenido h2 {
+    margin: 0 0 12px;
+
+    color: var(--texto-principal);
+
+    font-size: 22px;
+}
+
+.modalSalidaContenido p {
+    margin: 0 0 25px;
+
+    color: var(--texto-secundario);
+
+    font-size: 16px;
+}
+
+.botonesModalSalida {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.botonesModalSalida button {
+    flex: 1;
+
+    min-width: 0;
+    padding: 12px 18px;
+
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-principal);
+
+    background: var(--blanco);
+    color: var(--texto-principal);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botonesModalSalida button:hover {
+    background: var(--verde-hover);
+    transform: translateY(-2px);
+}
+
+#btnConfirmarSalida {
+    background: var(--verde-principal);
+    color: var(--blanco);
+    border-color: var(--verde-principal);
+}
+
+#btnConfirmarSalida:hover {
+    background: var(--verde-secundario);
+}
+
+@media (max-width: 600px) {
+
+    .modalSalidaContenido {
+        padding: 25px 20px;
+    }
+
+    .botonesModalSalida {
+        flex-direction: column-reverse;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — BOTONES DE REVISIÓN
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #botonesRevision {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #botonesRevision button {
+        width: 100%;
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}

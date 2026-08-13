@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador MTC</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Pantalla de Inicio -->
+<div id="pantallaInicio">
+
+    <h1>SIMULADOR MTC</h1>
+
+        <h2>Modo</h2>   
+
+    <div id="opcionesModo">     
+
+        <label>
+            <input type="radio" name="modo" value="estudio" checked>
+            Estudio
+        </label>
+
+        <label>
+            <input type="radio" name="modo" value="examen">
+            Examen
+        </label>
+
+    </div>
+
+    <hr>
+
+    <div id="opcionesEstudio">
+
+        <h2>Cantidad de preguntas</h2>
+
+        <label>
+            <input type="radio" name="cantidad" value="40" checked>
+            40 preguntas
+        </label>
+
+        <label>
+            <input type="radio" name="cantidad" value="todas">
+            Todas
+        </label>
+
+        <label>
+            <input type="radio" name="cantidad" value="personalizado">
+            Personalizado
+        </label>
+
+        <input
+            type="number"
+            id="cantidadPersonalizada"
+            min="1"
+            value=""
+            disabled>
+
+    </div>
+
+    <br>
+
+    <button id="btnComenzar">
+        Comenzar
+    </button>
+
+</div>
+
+
+<!-- Pantalla de Examen -->
+<div id="pantallaExamen" hidden>
+
+    <div class="encabezadoPantalla">
+        <h1>SIMULADOR MTC</h1>
+        <h2 id="tituloModo"></h2>
+    </div>
+
+    <div id="progresoExamen">
+
+        <span id="porcentajeProgreso">
+            0%
+        </span>
+
+        <div id="barraProgreso">
+
+            <div id="barraProgresoActual"></div>
+
+        </div>
+
+    </div>
+
+    <h2 id="contador"></h2>
+
+    <p id="pregunta"></p>
+
+    <div id="contenedorImagen" hidden>
+
+        <img
+            id="imagenPregunta"
+            alt="Imagen de la pregunta">
+
+    </div>
+
+    <div id="opciones"></div>
+
+    <button id="btnSiguiente">
+        Siguiente
+    </button>
+
+</div>
+
+
+<!-- Pantalla de Resultados -->
+<div id="pantallaResultado" hidden>
+
+    <div class="encabezadoPantalla">
+        <h1>SIMULADOR MTC</h1>
+        <h2>Resultados</h2>
+    </div>
+
+    <div id="contenidoResultado"></div>
+
+</div>
+
+
+<!-- Pantalla de revisión -->
+<div id="pantallaRevision" hidden>
+
+    <div class="encabezadoPantalla">
+        <h1>SIMULADOR MTC</h1>
+        <h2>Revisión de errores</h2>
+    </div>
+
+    <div id="contenidoRevision"></div>
+
+    <br>
+
+    <div id="botonesRevision">
+
+        <button id="btnNuevoExamenRevision" class="botonAccion botonPrincipal">
+            Nuevo examen
+        </button>
+
+        <button id="btnVolverResultado" class="botonAccion botonSecundario">
+            Volver al resultado
+        </button>
+
+        <button id="btnInicioRevision" class="botonAccion botonSecundario">
+            Ir a inicio
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Modal de confirmación para salir del examen -->
+<div id="modalSalida" class="modalSalida" hidden>
+
+    <div class="modalSalidaContenido" role="dialog" aria-modal="true" aria-labelledby="tituloModalSalida">
+
+        <h2 id="tituloModalSalida">¿Deseas salir del examen?</h2>
+
+        <p>Se perderá el progreso actual.</p>
+
+        <div class="botonesModalSalida">
+
+            <button id="btnCancelarSalida" type="button">
+                Cancelar
+            </button>
+
+            <button id="btnConfirmarSalida" type="button">
+                Salir
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="comun.js"></script>
+<script src="inicio.js"></script>
+<script src="examen.js"></script>
+<script src="resultados.js"></script>
+<script src="revision.js"></script>
+</body>
+</html>
