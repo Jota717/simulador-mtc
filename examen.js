@@ -73,7 +73,7 @@ async function cargarPreguntas() {
     try {
 
         const respuesta =
-            await fetch("data/preguntas.json");
+            await fetch("Data/preguntas.json");
 
 
         if (!respuesta.ok) {
