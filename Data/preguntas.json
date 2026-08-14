@@ -3123,7 +3123,7 @@
     "id": 121,
     "materia": "Materias generales",
     "tema": "Inspección Técnica Vehicular",
-    "pregunta": "¿A que se denomina Inspección Técnica Ordinaria?",
+    "pregunta": "¿A qué se denomina Inspección Técnica Ordinaria?",
     "imagen": null,
     "opciones": [
       {
@@ -3331,7 +3331,7 @@
     "id": 129,
     "materia": "Materias generales",
     "tema": "Reglamento Nacional de Vehículos",
-    "pregunta": "Los vehículos podrán contar con accesorios (defensas especiales delanteras, barras antivuelco, parrillas de techo, alerones, spoilers, viseras, estribos, etc.) siempre y cuando estos tengan bordes             .",
+    "pregunta": "Los vehículos podrán contar con accesorios (defensas especiales delanteras, barras antivuelco, parrillas de techo, alerones, spoilers, viseras, estribos, etc.) siempre y cuando estos tengan bordes_______.",
     "imagen": null,
     "opciones": [
       {
@@ -3487,7 +3487,7 @@
     "id": 135,
     "materia": "Materias generales",
     "tema": "Reglamento Nacional de Responsabilidad Civil y Seguros Obligatorios de Accidentes de Tránsito",
-    "pregunta": "¿Que obligación tiene el conductor o propietario del vehículo de producirse un accidente con un vehículo coberturado con SOAT?",
+    "pregunta": "¿Qué obligación tiene el conductor o propietario del vehículo de producirse un accidente con un vehículo coberturado con SOAT?",
     "imagen": null,
     "opciones": [
       {
@@ -3581,7 +3581,7 @@
         "imagen": null
       },
       {
-        "texto": "Si",
+        "texto": "Sí",
         "imagen": null
       }
     ],
@@ -3703,7 +3703,7 @@
         "imagen": null
       },
       {
-        "texto": "Si.",
+        "texto": "Sí.",
         "imagen": null
       },
       {
@@ -3729,7 +3729,7 @@
         "imagen": null
       },
       {
-        "texto": "Si",
+        "texto": "Sí",
         "imagen": null
       },
       {
@@ -3919,7 +3919,7 @@
         "imagen": null
       },
       {
-        "texto": "N.A",
+        "texto": "N.A.",
         "imagen": null
       }
     ],
@@ -4097,7 +4097,7 @@
         "imagen": null
       },
       {
-        "texto": "Clase B Categoría II B.",
+        "texto": "Clase B Categoría II B",
         "imagen": null
       },
       {
@@ -4509,7 +4509,7 @@
         "imagen": null
       },
       {
-        "texto": "Disminuye.",
+        "texto": "Disminuye",
         "imagen": null
       },
       {
@@ -4535,7 +4535,7 @@
         "imagen": null
       },
       {
-        "texto": "Continuas aceleraciones y frenadas bruscas.",
+        "texto": "Continuas aceleraciones y frenadas bruscas",
         "imagen": null
       },
       {
@@ -4587,7 +4587,7 @@
         "imagen": null
       },
       {
-        "texto": "Su vigilancia permite que el conductor realice los cambios de marcha en los rangos recomendados",
+        "texto": "Su vigilancia permite que el conductor realice los cambios de marcha en los rangos recomendados.",
         "imagen": null
       },
       {
@@ -4777,7 +4777,7 @@
         "imagen": null
       },
       {
-        "texto": "Su capacidad higroscópica",
+        "texto": "Su capacidad higroscópica.",
         "imagen": null
       }
     ],
@@ -4907,7 +4907,7 @@
         "imagen": null
       },
       {
-        "texto": "Ninguna de las anteriores",
+        "texto": "Ninguna de las anteriores.",
         "imagen": null
       }
     ],
@@ -4921,7 +4921,7 @@
     "imagen": null,
     "opciones": [
       {
-        "texto": "Si",
+        "texto": "Sí",
         "imagen": null
       },
       {
@@ -5021,7 +5021,7 @@
     "id": 194,
     "materia": "Materias generales",
     "tema": "Reglamento Nacional de Vehículos",
-    "pregunta": "¿ Qué color esta permitido para la luz alta adicional en un vehículo de categoría L?",
+    "pregunta": "¿Qué color esta permitido para la luz alta adicional en un vehículo de categoría L?",
     "imagen": null,
     "opciones": [
       {
@@ -5051,11 +5051,11 @@
     "imagen": null,
     "opciones": [
       {
-        "texto": "B II a",
+        "texto": "B II A",
         "imagen": null
       },
       {
-        "texto": "B II b",
+        "texto": "B II B",
         "imagen": null
       },
       {
@@ -6299,7 +6299,7 @@
     "imagen": null,
     "opciones": [
       {
-        "texto": "20km/h",
+        "texto": "20 km/h",
         "imagen": null
       },
       {
@@ -6537,7 +6537,7 @@
         "imagen": null
       },
       {
-        "texto": "Si, salvo prohibición expresa mediante la correspondiente señal.",
+        "texto": "Sí, salvo prohibición expresa mediante la correspondiente señal.",
         "imagen": null
       },
       {
@@ -6659,7 +6659,7 @@
     "id": 257,
     "materia": null,
     "tema": null,
-    "pregunta": "Si se aproxima a una zona escolar, ¿que acción debe realizar?",
+    "pregunta": "Si se aproxima a una zona escolar, ¿qué acción debe realizar?",
     "imagen": null,
     "opciones": [
       {
@@ -7674,7 +7674,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "La señal (P-3A), le indica al conductor que:",
-    "imagen": null,
+    "imagen": "P-3A.png",
     "opciones": [
       {
         "texto": "Hay una curva y contra-curva a la izquierda.",
@@ -9267,7 +9267,7 @@
         "imagen": null
       },
       {
-        "texto": "Si, ya que el conductor está de mal genio.",
+        "texto": "Sí, ya que el conductor está de mal genio.",
         "imagen": null
       },
       {
@@ -9445,7 +9445,7 @@
     "imagen": null,
     "opciones": [
       {
-        "texto": "Si.",
+        "texto": "Sí.",
         "imagen": null
       },
       {
