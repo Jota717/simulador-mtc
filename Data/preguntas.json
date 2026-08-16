@@ -7128,7 +7128,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "Si un conductor que circula por el carril derecho de una vía se encuentra con las flechas inclinadas que se muestran en la figura, su conducta correcta es:",
-    "imagen": "Img2.png",
+    "imagen": "img2.png",
     "opciones": [
       {
         "texto": "Continuar la circulación por el carril en que se encuentra.",
@@ -7258,7 +7258,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "En el caso representado en el siguiente gráfico ¿el vehículo rojo puede rebasar al azul?",
-    "imagen": "Img3.png",
+    "imagen": "img3.png",
     "opciones": [
       {
         "texto": "Puede hacerlo si no viene un vehículo en el sentido contrario.",
@@ -8324,7 +8324,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "Si al conducir su vehículo se encuentra con la señal vertical que se muestra, usted debe entender que:",
-    "imagen": "Img4.png",
+    "imagen": "img4.png",
     "opciones": [
       {
         "texto": "La vía está interrumpida y debe tomar el camino alternativo que muestra la señal.",
@@ -8350,7 +8350,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "Si al conducir su vehículo se encuentra con la señal vertical que se muestra, usted debe entender que:",
-    "imagen": "Img5.png",
+    "imagen": "img5.png",
     "opciones": [
       {
         "texto": "Si quiere girar a la izquierda debe pasar la intersección y dar la vuelta a la manzana.",
@@ -9468,7 +9468,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "El siguiente gráfico muestra:",
-    "imagen": "Img7.png",
+    "imagen": "img7.png",
     "opciones": [
       {
         "texto": "Señalización de tránsito vertical y horizontal en una zona escolar.",
@@ -9520,7 +9520,7 @@
     "materia": null,
     "tema": null,
     "pregunta": "Si al conducir en una intersección se encuentra con las siguientes marcas en el pavimento (malla ortogonal de color amarillo), significa:",
-    "imagen": "Img8.png",
+    "imagen": "img8.png",
     "opciones": [
       {
         "texto": "Que no puede detener el vehículo dentro del área de intersección.",
